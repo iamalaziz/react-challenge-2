@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MdFolder } from 'react-icons/md';
+import { ImFolder, ImFolderOpen } from 'react-icons/im';
 
 const folders_tree = {
   children: [
@@ -66,9 +66,14 @@ function Entry({ entry, depth }: { entry: TEntry; depth: number }) {
           console.log(depth);
         }}
       >
-        {entry.children && (
+        {entry.children && isExpanded && (
           <i className="folder_icon">
-            <MdFolder />
+            <ImFolderOpen />
+          </i>
+        )}
+         {entry.children && !isExpanded && (
+          <i className="folder_icon">
+            <ImFolder />
           </i>
         )}
         {entry.name}
@@ -87,6 +92,7 @@ function Entry({ entry, depth }: { entry: TEntry; depth: number }) {
 function Sidebar() {
   return (
     <aside>
+      <p>EXPLORER</p>
       <h3 className="title">react-challenge-2</h3>
       {folders_tree.children.map((entry, id) => (
         <Entry key={id} entry={entry} depth={1} />
