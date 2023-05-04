@@ -66,16 +66,12 @@ function Entry({ entry, depth }: { entry: TEntry; depth: number }) {
           console.log(depth);
         }}
       >
-        {entry.children && isExpanded && (
+        {entry.children && (
           <i className="folder_icon">
-            <ImFolderOpen />
+            {isExpanded ? <ImFolderOpen /> : <ImFolder />}
           </i>
         )}
-         {entry.children && !isExpanded && (
-          <i className="folder_icon">
-            <ImFolder />
-          </i>
-        )}
+
         {entry.name}
       </div>
       {isExpanded && (
