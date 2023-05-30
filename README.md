@@ -12,3 +12,6 @@
 `To pass this challenge, I used **recursive components**.`
 
 [DEMO](https://react-challenge-2.vercel.app/)
+
+
+<img width="1070" alt="Screen Shot 2023-05-30 at 3 19 05 PM" src="https://github.com/iamalaziz/react-challenge-2/assets/81867375/90a098eb-bc1b-4490-aa29-7a0f1efeb856">
